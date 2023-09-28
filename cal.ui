@@ -61,7 +61,7 @@
     </widget>
    </item>
    <item>
-    <widget class="QLineEdit" name="lineEdit_2">
+    <widget class="QLineEdit" name="side_display">
      <property name="sizePolicy">
       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
        <horstretch>0</horstretch>
@@ -96,15 +96,18 @@
       <string notr="true">color:#9A9A9A</string>
      </property>
      <property name="text">
-      <string>0</string>
+      <string/>
      </property>
      <property name="alignment">
       <set>Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing</set>
      </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
     </widget>
    </item>
    <item>
-    <widget class="QLineEdit" name="lineEdit">
+    <widget class="QLineEdit" name="display">
      <property name="minimumSize">
       <size>
        <width>0</width>
@@ -131,6 +134,9 @@
      </property>
      <property name="alignment">
       <set>Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing</set>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
      </property>
     </widget>
    </item>
@@ -188,8 +194,21 @@
         </font>
        </property>
        <property name="styleSheet">
-        <string notr="true">background-color: rgb(249, 249, 249);
-color: #591BB7;</string>
+        <string notr="true">QPushButton{
+	background-color: rgb(249, 249, 249);	
+	color: #591BB7;
+}
+
+QPushButton:hover { 
+	background-color: rgb(246, 246, 246);
+	color: #591BB7;
+ }
+QPushButton:disabled {
+	background-color:rgb(244 , 244 , 244);
+	color: rgb(100,100,100);
+ }
+
+</string>
        </property>
        <property name="text">
         <string>shift</string>
@@ -215,6 +234,19 @@ color: #591BB7;</string>
          <family>Microsoft JhengHei UI</family>
          <pointsize>18</pointsize>
         </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton:pressed {
+    background-color:rgb(247 , 247 , 247);
+	color: rgb(120,120,120);
+}
+QPushButton:hover { 
+	background-color: rgb(249, 249, 249);
+ }
+QPushButton:disabled {
+	background-color:rgb(244 , 244 , 244);
+	color: rgb(100,100,100);
+ }</string>
        </property>
        <property name="text">
         <string>2</string>
@@ -242,7 +274,22 @@ color: #591BB7;</string>
         </font>
        </property>
        <property name="styleSheet">
-        <string notr="true">background-color: rgb(249, 249, 249);</string>
+        <string notr="true">QPushButton {
+	background-color: rgb(249, 249, 249);}
+
+QPushButton:pressed 
+{
+    background-color:rgb(244 , 244 , 244);
+	color: rgb(100,100,100);
+}
+QPushButton:hover { 
+	background-color: rgb(246, 246, 246);
+ }
+QPushButton:disabled {
+	background-color:rgb(244 , 244 , 244);
+	color: rgb(100,100,100);
+ }
+</string>
        </property>
        <property name="text">
         <string>1/x</string>
@@ -250,7 +297,7 @@ color: #591BB7;</string>
       </widget>
      </item>
      <item row="1" column="3">
-      <widget class="QPushButton" name="btn_CE">
+      <widget class="QPushButton" name="btn_C">
        <property name="minimumSize">
         <size>
          <width>111</width>
@@ -270,10 +317,25 @@ color: #591BB7;</string>
         </font>
        </property>
        <property name="styleSheet">
-        <string notr="true">background-color: rgb(249, 249, 249);</string>
+        <string notr="true">QPushButton {
+	background-color: rgb(249, 249, 249);}
+
+QPushButton:pressed 
+{
+    background-color:rgb(244 , 244 , 244);
+	color: rgb(100,100,100);
+}
+QPushButton:hover { 
+	background-color: rgb(246, 246, 246);
+ }
+QPushButton:disabled {
+	background-color:rgb(244 , 244 , 244);
+	color: rgb(100,100,100);
+ }
+</string>
        </property>
        <property name="text">
-        <string>CE</string>
+        <string>C</string>
        </property>
       </widget>
      </item>
@@ -296,6 +358,19 @@ color: #591BB7;</string>
          <family>Microsoft JhengHei UI</family>
          <pointsize>18</pointsize>
         </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton:pressed {
+    background-color:rgb(247 , 247 , 247);
+	color: rgb(120,120,120);
+}
+QPushButton:hover { 
+	background-color: rgb(249, 249, 249);
+ }
+QPushButton:disabled {
+	background-color:rgb(244 , 244 , 244);
+	color: rgb(100,100,100);
+ }</string>
        </property>
        <property name="text">
         <string>4</string>
@@ -323,7 +398,22 @@ color: #591BB7;</string>
         </font>
        </property>
        <property name="styleSheet">
-        <string notr="true">background-color: rgb(249, 249, 249);</string>
+        <string notr="true">QPushButton {
+	background-color: rgb(249, 249, 249);}
+
+QPushButton:pressed 
+{
+    background-color:rgb(244 , 244 , 244);
+	color: rgb(100,100,100);
+}
+QPushButton:hover { 
+	background-color: rgb(246, 246, 246);
+ }
+QPushButton:disabled {
+	background-color:rgb(244 , 244 , 244);
+	color: rgb(100,100,100);
+ }
+</string>
        </property>
        <property name="text">
         <string>+</string>
@@ -351,9 +441,24 @@ color: #591BB7;</string>
         </font>
        </property>
        <property name="styleSheet">
-        <string notr="true">background-color: #591BB7;
-color: rgb(255, 255, 255);
-</string>
+        <string notr="true">
+QPushButton{
+	background-color: #591BB7;
+	color: rgb(255, 255, 255);
+}
+QPushButton:pressed
+{
+    background-color:rgb(70, 10, 160);
+	color: rgb(255, 255, 255);
+}
+QPushButton:hover { 
+	background-color: rgb(80, 20, 170);
+	color: rgb(255, 255, 255);
+ }
+QPushButton:disabled {
+	background-color:rgb(244 , 244 , 244);
+	color: rgb(100,100,100);
+ }</string>
        </property>
        <property name="text">
         <string>=</string>
@@ -361,7 +466,7 @@ color: rgb(255, 255, 255);
       </widget>
      </item>
      <item row="3" column="2">
-      <widget class="QPushButton" name="btn_bra_r">
+      <widget class="QPushButton" name="btn_fun_sqrt">
        <property name="minimumSize">
         <size>
          <width>111</width>
@@ -380,8 +485,26 @@ color: rgb(255, 255, 255);
          <pointsize>18</pointsize>
         </font>
        </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+	background-color: rgb(249, 249, 249);}
+
+QPushButton:pressed 
+{
+    background-color:rgb(244 , 244 , 244);
+	color: rgb(100,100,100);
+}
+QPushButton:hover { 
+	background-color: rgb(246, 246, 246);
+ }
+QPushButton:disabled {
+	background-color:rgb(244 , 244 , 244);
+	color: rgb(100,100,100);
+ }
+</string>
+       </property>
        <property name="text">
-        <string>)</string>
+        <string>sqrt</string>
        </property>
       </widget>
      </item>
@@ -404,6 +527,19 @@ color: rgb(255, 255, 255);
          <family>Microsoft JhengHei UI</family>
          <pointsize>18</pointsize>
         </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton:pressed {
+    background-color:rgb(247 , 247 , 247);
+	color: rgb(120,120,120);
+}
+QPushButton:hover { 
+	background-color: rgb(249, 249, 249);
+ }
+QPushButton:disabled {
+	background-color:rgb(244 , 244 , 244);
+	color: rgb(100,100,100);
+ }</string>
        </property>
        <property name="text">
         <string>8</string>
@@ -429,6 +565,19 @@ color: rgb(255, 255, 255);
          <family>Microsoft JhengHei UI</family>
          <pointsize>18</pointsize>
         </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton:pressed {
+    background-color:rgb(247 , 247 , 247);
+	color: rgb(120,120,120);
+}
+QPushButton:hover { 
+	background-color: rgb(249, 249, 249);
+ }
+QPushButton:disabled {
+	background-color:rgb(244 , 244 , 244);
+	color: rgb(100,100,100);
+ }</string>
        </property>
        <property name="text">
         <string>9</string>
@@ -456,7 +605,22 @@ color: rgb(255, 255, 255);
         </font>
        </property>
        <property name="styleSheet">
-        <string notr="true">background-color: rgb(249, 249, 249);</string>
+        <string notr="true">QPushButton {
+	background-color: rgb(249, 249, 249);}
+
+QPushButton:pressed 
+{
+    background-color:rgb(244 , 244 , 244);
+	color: rgb(100,100,100);
+}
+QPushButton:hover { 
+	background-color: rgb(246, 246, 246);
+ }
+QPushButton:disabled {
+	background-color:rgb(244 , 244 , 244);
+	color: rgb(100,100,100);
+ }
+</string>
        </property>
        <property name="text">
         <string>-</string>
@@ -480,14 +644,29 @@ color: rgb(255, 255, 255);
        <property name="font">
         <font>
          <family>Microsoft JhengHei UI</family>
-         <pointsize>32</pointsize>
+         <pointsize>18</pointsize>
         </font>
        </property>
        <property name="styleSheet">
-        <string notr="true">background-color: rgb(249, 249, 249);</string>
+        <string notr="true">QPushButton {
+	background-color: rgb(249, 249, 249);}
+
+QPushButton:pressed 
+{
+    background-color:rgb(244 , 244 , 244);
+	color: rgb(100,100,100);
+}
+QPushButton:hover { 
+	background-color: rgb(246, 246, 246);
+ }
+QPushButton:disabled {
+	background-color:rgb(244 , 244 , 244);
+	color: rgb(100,100,100);
+ }
+</string>
        </property>
        <property name="text">
-        <string>←</string>
+        <string>DEL</string>
        </property>
       </widget>
      </item>
@@ -512,7 +691,22 @@ color: rgb(255, 255, 255);
         </font>
        </property>
        <property name="styleSheet">
-        <string notr="true">background-color: rgb(249, 249, 249);</string>
+        <string notr="true">QPushButton {
+	background-color: rgb(249, 249, 249);}
+
+QPushButton:pressed 
+{
+    background-color:rgb(244 , 244 , 244);
+	color: rgb(100,100,100);
+}
+QPushButton:hover { 
+	background-color: rgb(246, 246, 246);
+ }
+QPushButton:disabled {
+	background-color:rgb(244 , 244 , 244);
+	color: rgb(100,100,100);
+ }
+</string>
        </property>
        <property name="text">
         <string>ln</string>
@@ -539,13 +733,26 @@ color: rgb(255, 255, 255);
          <pointsize>18</pointsize>
         </font>
        </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton:pressed {
+    background-color:rgb(247 , 247 , 247);
+	color: rgb(120,120,120);
+}
+QPushButton:hover { 
+	background-color: rgb(249, 249, 249);
+ }
+QPushButton:disabled {
+	background-color:rgb(244 , 244 , 244);
+	color: rgb(100,100,100);
+ }</string>
+       </property>
        <property name="text">
         <string>6</string>
        </property>
       </widget>
      </item>
      <item row="3" column="0">
-      <widget class="QPushButton" name="btn_fun_sqrt">
+      <widget class="QPushButton" name="btn_fun_x3">
        <property name="minimumSize">
         <size>
          <width>111</width>
@@ -565,10 +772,25 @@ color: rgb(255, 255, 255);
         </font>
        </property>
        <property name="styleSheet">
-        <string notr="true">background-color: rgb(249, 249, 249);</string>
+        <string notr="true">QPushButton {
+	background-color: rgb(249, 249, 249);}
+
+QPushButton:pressed 
+{
+    background-color:rgb(244 , 244 , 244);
+	color: rgb(100,100,100);
+}
+QPushButton:hover { 
+	background-color: rgb(246, 246, 246);
+ }
+QPushButton:disabled {
+	background-color:rgb(244 , 244 , 244);
+	color: rgb(100,100,100);
+ }
+</string>
        </property>
        <property name="text">
-        <string>sqrt</string>
+        <string>x^3</string>
        </property>
       </widget>
      </item>
@@ -591,6 +813,19 @@ color: rgb(255, 255, 255);
          <family>Microsoft JhengHei UI</family>
          <pointsize>18</pointsize>
         </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton:pressed {
+    background-color:rgb(247 , 247 , 247);
+	color: rgb(120,120,120);
+}
+QPushButton:hover { 
+	background-color: rgb(249, 249, 249);
+ }
+QPushButton:disabled {
+	background-color:rgb(244 , 244 , 244);
+	color: rgb(100,100,100);
+ }</string>
        </property>
        <property name="text">
         <string>+/-</string>
@@ -616,6 +851,19 @@ color: rgb(255, 255, 255);
          <family>Microsoft JhengHei UI</family>
          <pointsize>18</pointsize>
         </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton:pressed {
+    background-color:rgb(247 , 247 , 247);
+	color: rgb(120,120,120);
+}
+QPushButton:hover { 
+	background-color: rgb(249, 249, 249);
+ }
+QPushButton:disabled {
+	background-color:rgb(244 , 244 , 244);
+	color: rgb(100,100,100);
+ }</string>
        </property>
        <property name="text">
         <string>5</string>
@@ -643,7 +891,22 @@ color: rgb(255, 255, 255);
         </font>
        </property>
        <property name="styleSheet">
-        <string notr="true">background-color: rgb(249, 249, 249);</string>
+        <string notr="true">QPushButton {
+	background-color: rgb(249, 249, 249);}
+
+QPushButton:pressed 
+{
+    background-color:rgb(244 , 244 , 244);
+	color: rgb(100,100,100);
+}
+QPushButton:hover { 
+	background-color: rgb(246, 246, 246);
+ }
+QPushButton:disabled {
+	background-color:rgb(244 , 244 , 244);
+	color: rgb(100,100,100);
+ }
+</string>
        </property>
        <property name="text">
         <string>x^2</string>
@@ -670,6 +933,19 @@ color: rgb(255, 255, 255);
          <pointsize>18</pointsize>
         </font>
        </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton:pressed {
+    background-color:rgb(247 , 247 , 247);
+	color: rgb(120,120,120);
+}
+QPushButton:hover { 
+	background-color: rgb(249, 249, 249);
+ }
+QPushButton:disabled {
+	background-color:rgb(244 , 244 , 244);
+	color: rgb(100,100,100);
+ }</string>
+       </property>
        <property name="text">
         <string>1</string>
        </property>
@@ -694,6 +970,24 @@ color: rgb(255, 255, 255);
          <family>Microsoft JhengHei UI</family>
          <pointsize>18</pointsize>
         </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+	background-color: rgb(249, 249, 249);}
+
+QPushButton:pressed 
+{
+    background-color:rgb(244 , 244 , 244);
+	color: rgb(100,100,100);
+}
+QPushButton:hover { 
+	background-color: rgb(246, 246, 246);
+ }
+QPushButton:disabled {
+	background-color:rgb(244 , 244 , 244);
+	color: rgb(100,100,100);
+ }
+</string>
        </property>
        <property name="text">
         <string>x!</string>
@@ -721,7 +1015,22 @@ color: rgb(255, 255, 255);
         </font>
        </property>
        <property name="styleSheet">
-        <string notr="true">background-color: rgb(249, 249, 249);</string>
+        <string notr="true">QPushButton {
+	background-color: rgb(249, 249, 249);}
+
+QPushButton:pressed 
+{
+    background-color:rgb(244 , 244 , 244);
+	color: rgb(100,100,100);
+}
+QPushButton:hover { 
+	background-color: rgb(246, 246, 246);
+ }
+QPushButton:disabled {
+	background-color:rgb(244 , 244 , 244);
+	color: rgb(100,100,100);
+ }
+</string>
        </property>
        <property name="text">
         <string>10^x</string>
@@ -749,7 +1058,22 @@ color: rgb(255, 255, 255);
         </font>
        </property>
        <property name="styleSheet">
-        <string notr="true">background-color: rgb(249, 249, 249);</string>
+        <string notr="true">QPushButton {
+	background-color: rgb(249, 249, 249);}
+
+QPushButton:pressed 
+{
+    background-color:rgb(244 , 244 , 244);
+	color: rgb(100,100,100);
+}
+QPushButton:hover { 
+	background-color: rgb(246, 246, 246);
+ }
+QPushButton:disabled {
+	background-color:rgb(244 , 244 , 244);
+	color: rgb(100,100,100);
+ }
+</string>
        </property>
        <property name="text">
         <string>log</string>
@@ -777,10 +1101,25 @@ color: rgb(255, 255, 255);
         </font>
        </property>
        <property name="styleSheet">
-        <string notr="true">background-color: rgb(249, 249, 249);</string>
+        <string notr="true">QPushButton {
+	background-color: rgb(249, 249, 249);}
+
+QPushButton:pressed 
+{
+    background-color:rgb(244 , 244 , 244);
+	color: rgb(100,100,100);
+}
+QPushButton:hover { 
+	background-color: rgb(246, 246, 246);
+ }
+QPushButton:disabled {
+	background-color:rgb(244 , 244 , 244);
+	color: rgb(100,100,100);
+ }
+</string>
        </property>
        <property name="text">
-        <string>÷</string>
+        <string>/</string>
        </property>
       </widget>
      </item>
@@ -803,6 +1142,19 @@ color: rgb(255, 255, 255);
          <family>Microsoft JhengHei UI</family>
          <pointsize>18</pointsize>
         </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton:pressed {
+    background-color:rgb(247 , 247 , 247);
+	color: rgb(120,120,120);
+}
+QPushButton:hover { 
+	background-color: rgb(249, 249, 249);
+ }
+QPushButton:disabled {
+	background-color:rgb(244 , 244 , 244);
+	color: rgb(100,100,100);
+ }</string>
        </property>
        <property name="text">
         <string>.</string>
@@ -830,7 +1182,22 @@ color: rgb(255, 255, 255);
         </font>
        </property>
        <property name="styleSheet">
-        <string notr="true">background-color: rgb(249, 249, 249);</string>
+        <string notr="true">QPushButton {
+	background-color: rgb(249, 249, 249);}
+
+QPushButton:pressed 
+{
+    background-color:rgb(244 , 244 , 244);
+	color: rgb(100,100,100);
+}
+QPushButton:hover { 
+	background-color: rgb(246, 246, 246);
+ }
+QPushButton:disabled {
+	background-color:rgb(244 , 244 , 244);
+	color: rgb(100,100,100);
+ }
+</string>
        </property>
        <property name="text">
         <string>abs</string>
@@ -856,6 +1223,19 @@ color: rgb(255, 255, 255);
          <family>Microsoft JhengHei UI</family>
          <pointsize>18</pointsize>
         </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton:pressed {
+    background-color:rgb(247 , 247 , 247);
+	color: rgb(120,120,120);
+}
+QPushButton:hover { 
+	background-color: rgb(249, 249, 249);
+ }
+QPushButton:disabled {
+	background-color:rgb(244 , 244 , 244);
+	color: rgb(100,100,100);
+ }</string>
        </property>
        <property name="text">
         <string>7</string>
@@ -883,7 +1263,22 @@ color: rgb(255, 255, 255);
         </font>
        </property>
        <property name="styleSheet">
-        <string notr="true">background-color: rgb(249, 249, 249);</string>
+        <string notr="true">QPushButton {
+	background-color: rgb(249, 249, 249);}
+
+QPushButton:pressed 
+{
+    background-color:rgb(244 , 244 , 244);
+	color: rgb(100,100,100);
+}
+QPushButton:hover { 
+	background-color: rgb(246, 246, 246);
+ }
+QPushButton:disabled {
+	background-color:rgb(244 , 244 , 244);
+	color: rgb(100,100,100);
+ }
+</string>
        </property>
        <property name="text">
         <string>exp</string>
@@ -891,7 +1286,7 @@ color: rgb(255, 255, 255);
       </widget>
      </item>
      <item row="3" column="1">
-      <widget class="QPushButton" name="btn_bra_l">
+      <widget class="QPushButton" name="btn_fun_rand">
        <property name="minimumSize">
         <size>
          <width>111</width>
@@ -910,8 +1305,26 @@ color: rgb(255, 255, 255);
          <pointsize>18</pointsize>
         </font>
        </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+	background-color: rgb(249, 249, 249);}
+
+QPushButton:pressed 
+{
+    background-color:rgb(244 , 244 , 244);
+	color: rgb(100,100,100);
+}
+QPushButton:hover { 
+	background-color: rgb(246, 246, 246);
+ }
+QPushButton:disabled {
+	background-color:rgb(244 , 244 , 244);
+	color: rgb(100,100,100);
+ }
+</string>
+       </property>
        <property name="text">
-        <string>(</string>
+        <string>rand</string>
        </property>
       </widget>
      </item>
@@ -934,6 +1347,19 @@ color: rgb(255, 255, 255);
          <family>Microsoft JhengHei UI</family>
          <pointsize>18</pointsize>
         </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton:pressed {
+    background-color:rgb(247 , 247 , 247);
+	color: rgb(120,120,120);
+}
+QPushButton:hover { 
+	background-color: rgb(249, 249, 249);
+ }
+QPushButton:disabled {
+	background-color:rgb(244 , 244 , 244);
+	color: rgb(100,100,100);
+ }</string>
        </property>
        <property name="text">
         <string>0</string>
@@ -961,7 +1387,22 @@ color: rgb(255, 255, 255);
         </font>
        </property>
        <property name="styleSheet">
-        <string notr="true">background-color: rgb(249, 249, 249);</string>
+        <string notr="true">QPushButton {
+	background-color: rgb(249, 249, 249);}
+
+QPushButton:pressed 
+{
+    background-color:rgb(244 , 244 , 244);
+	color: rgb(100,100,100);
+}
+QPushButton:hover { 
+	background-color: rgb(246, 246, 246);
+ }
+QPushButton:disabled {
+	background-color:rgb(244 , 244 , 244);
+	color: rgb(100,100,100);
+ }
+</string>
        </property>
        <property name="text">
         <string>e</string>
@@ -989,7 +1430,22 @@ color: rgb(255, 255, 255);
         </font>
        </property>
        <property name="styleSheet">
-        <string notr="true">background-color: rgb(249, 249, 249);</string>
+        <string notr="true">QPushButton {
+	background-color: rgb(249, 249, 249);}
+
+QPushButton:pressed 
+{
+    background-color:rgb(244 , 244 , 244);
+	color: rgb(100,100,100);
+}
+QPushButton:hover { 
+	background-color: rgb(246, 246, 246);
+ }
+QPushButton:disabled {
+	background-color:rgb(244 , 244 , 244);
+	color: rgb(100,100,100);
+ }
+</string>
        </property>
        <property name="text">
         <string>π</string>
@@ -1017,7 +1473,22 @@ color: rgb(255, 255, 255);
         </font>
        </property>
        <property name="styleSheet">
-        <string notr="true">background-color: rgb(249, 249, 249);</string>
+        <string notr="true">QPushButton {
+	background-color: rgb(249, 249, 249);}
+
+QPushButton:pressed 
+{
+    background-color:rgb(244 , 244 , 244);
+	color: rgb(100,100,100);
+}
+QPushButton:hover { 
+	background-color: rgb(246, 246, 246);
+ }
+QPushButton:disabled {
+	background-color:rgb(244 , 244 , 244);
+	color: rgb(100,100,100);
+ }
+</string>
        </property>
        <property name="text">
         <string>x^y</string>
@@ -1045,10 +1516,25 @@ color: rgb(255, 255, 255);
         </font>
        </property>
        <property name="styleSheet">
-        <string notr="true">background-color: rgb(249, 249, 249);</string>
+        <string notr="true">QPushButton {
+	background-color: rgb(249, 249, 249);}
+
+QPushButton:pressed 
+{
+    background-color:rgb(244 , 244 , 244);
+	color: rgb(100,100,100);
+}
+QPushButton:hover { 
+	background-color: rgb(246, 246, 246);
+ }
+QPushButton:disabled {
+	background-color:rgb(244 , 244 , 244);
+	color: rgb(100,100,100);
+ }
+</string>
        </property>
        <property name="text">
-        <string>×</string>
+        <string>*</string>
        </property>
       </widget>
      </item>
@@ -1073,7 +1559,22 @@ color: rgb(255, 255, 255);
         </font>
        </property>
        <property name="styleSheet">
-        <string notr="true">background-color: rgb(249, 249, 249);</string>
+        <string notr="true">QPushButton {
+	background-color: rgb(249, 249, 249);}
+
+QPushButton:pressed 
+{
+    background-color:rgb(244 , 244 , 244);
+	color: rgb(100,100,100);
+}
+QPushButton:hover { 
+	background-color: rgb(246, 246, 246);
+ }
+QPushButton:disabled {
+	background-color:rgb(244 , 244 , 244);
+	color: rgb(100,100,100);
+ }
+</string>
        </property>
        <property name="text">
         <string>mod</string>
@@ -1099,6 +1600,19 @@ color: rgb(255, 255, 255);
          <family>Microsoft JhengHei UI</family>
          <pointsize>18</pointsize>
         </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton:pressed {
+    background-color:rgb(247 , 247 , 247);
+	color: rgb(120,120,120);
+}
+QPushButton:hover { 
+	background-color: rgb(249, 249, 249);
+ }
+QPushButton:disabled {
+	background-color:rgb(244 , 244 , 244);
+	color: rgb(100,100,100);
+ }</string>
        </property>
        <property name="text">
         <string>3</string>
