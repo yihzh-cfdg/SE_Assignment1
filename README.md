@@ -17,9 +17,9 @@
 
 
 
-## Gitcode项目地址
+## Github项目地址
 
-[Python简单科学计算器](https://gitcode.net/yihzh/SE_Assignment1)
+[软件工程第一次作业——PyQt实现可视化科学计算器](https://github.com/yihzh-cfdg/SE_Assignment1)
 
 
 
