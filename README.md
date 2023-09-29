@@ -70,7 +70,9 @@
 
 我把计算器分为两个模块：计算器本体和GUI，GUI只提供图像界面，所有的计算功能都在本体实现。
 
-![](D:\hexo\source\images\流程图.png)
+![流程图](img/1.png)
+
+
 
 ### 计算器本体
 
@@ -80,7 +82,7 @@
 class Calculator(QtWidgets.QWidget)
 ```
 
-<img src="D:\hexo\source\images\Calculator.png"  />
+![](img/2.png)
 
 - `__init__`、`add_onclick_functions`：初始化一些变量和设置界面
 - `on_button_clicked`、`on_shift_clicked`：按钮点击事件的处理函数，根据按钮的不同执行相应的操作
@@ -250,8 +252,8 @@ def disp(self, isChangeupper: bool, ut: str, isChangedown: bool, dt: str):
 
 使用grid布局：
 
-<img src="D:\hexo\source\images\画布-页面 1.png" alt="原型" style="zoom: 80%;" />
-<img src="D:\hexo\source\images\3.png" alt="实现" style="zoom: 80%;" />
+![](img/3.png)
+![](img/4.png)
 
 有两种加载方式，一是程序就从文件中加载UI定义，动态创建一个相应的窗口对象，二是先把UI文件直接转化为包含界面定义的Python代码文件，然后在你的程序中使用定义界面的类。我使用了第二种方式，这样还能稍微改一改界面类。
 
@@ -360,9 +362,23 @@ elif button_text == '=':
 
 ## 功能展示
 
+### 基础运算演示
+
+![](img/basic.gif)
 
 
- 
+
+### 科学运算演示
+
+![](img/func1.gif)
+
+
+
+### 三角函数运算演示
+
+ ![](img/func2.gif)
+
+
 
 ## 优化和性能改进
 
@@ -481,13 +497,13 @@ def test_equ_times(self):
 
 总共写了31个测试类，全部通过
 
-![](D:\hexo\source\images\4.png)
+![Unittest](img/5.png)
 
 同时也用coverage看了一下覆盖率，达到了94%，哪里还没有覆盖到呢？检查后发现是我写的茫茫多`try`/`expect`，行吧，这些部分没覆盖到说不定也是好事。
 
-![](D:\hexo\source\images\5.png)
+![coverage](img/6.png)
 
-![](D:\hexo\source\images\6.png)
+![Try](img/7.png)
 
 要如何提升覆盖率呢？想了想就是要多放一点容易出错的数据进去，比如根号负数、除以0、tan90°之类的啦。
 
