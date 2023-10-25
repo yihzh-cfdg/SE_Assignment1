@@ -51,8 +51,8 @@ class Calculator(QtWidgets.QWidget):
                 button_text = '**'
             if button_text == 'mod':
                 button_text = '%'
-            if self.bDot and self.new_exp[-1] == '.':
-                self.new_exp += '0'
+            if self.bDot and len(self.new_exp) > 0 and self.new_exp[-1] == '.':
+                self.new_exp = '0'
             if self.bChangeop:
                 self.old_exp = self.old_exp[:-1]
                 self.old_exp += button_text
@@ -223,16 +223,16 @@ class Calculator(QtWidgets.QWidget):
             self.new_exp = str(self.currentVal)
             self.disp(0, None, 1, self.new_exp)
         elif button_text == 'sin':
-            self.currentVal = round(math.sin(math.radians(self.currentVal)),10)
+            self.currentVal = round(math.sin(math.radians(self.currentVal)), 10)
             self.new_exp = str(self.currentVal)
             self.disp(0, None, 1, self.new_exp)
         elif button_text == 'cos':
-            self.currentVal = round(math.cos(math.radians(self.currentVal)),10)
+            self.currentVal = round(math.cos(math.radians(self.currentVal)), 10)
             self.new_exp = str(self.currentVal)
             self.disp(0, None, 1, self.new_exp)
         elif button_text == 'tan':
             try:
-                self.currentVal = round(math.tan(math.radians(self.currentVal)),10)
+                self.currentVal = round(math.tan(math.radians(self.currentVal)), 10)
                 if self.currentVal > 1e16:
                     raise OverflowError
             except Exception as e:
@@ -242,7 +242,7 @@ class Calculator(QtWidgets.QWidget):
             self.disp(0, None, 1, self.new_exp)
         elif button_text == 'arcsin':
             try:
-                self.currentVal = round(math.asin(self.currentVal),10)
+                self.currentVal = round(math.asin(self.currentVal), 10)
             except Exception as e:
                 self.ErrorHandler(e)
                 return
@@ -250,7 +250,7 @@ class Calculator(QtWidgets.QWidget):
             self.disp(0, None, 1, self.new_exp)
         elif button_text == 'arccos':
             try:
-                self.currentVal = round(math.acos(self.currentVal),10)
+                self.currentVal = round(math.acos(self.currentVal), 10)
             except Exception as e:
                 self.ErrorHandler(e)
                 return
@@ -258,7 +258,7 @@ class Calculator(QtWidgets.QWidget):
             self.disp(0, None, 1, self.new_exp)
         elif button_text == 'arctan':
             try:
-                self.currentVal = round(math.atan(self.currentVal),10)
+                self.currentVal = round(math.atan(self.currentVal), 10)
             except Exception as e:
                 self.ErrorHandler(e)
                 return
@@ -277,7 +277,7 @@ class Calculator(QtWidgets.QWidget):
         for button in buttons:
             button.clicked.connect(self.on_button_clicked)
 
-    def ErrorHandler(self, e:Exception):
+    def ErrorHandler(self, e: Exception):
         self.bError = True
         exc_type, exc_obj, exc_tb = sys.exc_info()
         buttons = self.findChildren(QPushButton)
